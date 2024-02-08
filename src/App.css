@@ -1,0 +1,208 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+  background-color: #555;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.table-container {
+    width: 95%;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0,0.7);
+    backdrop-filter: blur(20px);
+    border-radius: 3px;
+}
+
+
+.navbar {
+   display: flex;
+   padding: 15px 10px;
+   justify-content: space-between;
+   align-items: center;
+}
+.navbar .logo h3 {
+   color: white;
+   font-size: 22px;
+}
+.navbar  .right {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+}
+.navbar  .right button {
+background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px ;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.navbar .right .hamburger {
+   width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+ }
+ 
+ .hamburger div {
+   width: 100%;
+   height: 4px;
+   background-color: #ffffff;
+   position: absolute;
+   transition: transform 0.3s ease;
+ }
+ .hamburger div:nth-child(1) {
+   top: 0;
+ }
+ .hamburger div:nth-child(2) {
+   top: 8px;
+ }
+ .hamburger div:nth-child(3) {
+   top: 16px;
+ }
+
+
+ .header {
+    display: none;
+ }
+ .body{
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    /* display: flex; 
+    flex-direction: column;
+    align-items: center; */
+ }
+ .body:nth-child(odd){
+    background-color: rgba(219, 219, 219, 0.897);
+ }
+ .body .cell {
+    display: grid;
+    gap: 5px;
+    margin: 5px 0;
+   grid-template-columns: 100px auto;
+   font-size: 14px;
+   /* border-top: 1px solid black;
+   border-bottom: 1px solid black; */
+   padding: 5px 10px;
+   align-items: center;
+ }
+
+ /*  inside a cell design  button */
+ .body .cell.btns   {
+      display: flex;
+      gap: 10px;
+ }
+ .body .cell.btns  button {
+   display: inline-block;
+    padding: 10px ;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6347; /* Red color */
+    color: #fff; /* White color */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s ease;
+ }
+
+/* inside a cell design select */
+
+.cell.selects {
+   position: relative;
+   border-radius: 5px;
+   overflow: hidden;
+ }
+ /* Select Box */
+ .cell.selects select {
+   width: 100%;
+   height: 100%;
+   border: none;
+   outline: none;
+   background-color: transparent;
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   cursor: pointer;
+   font-size: 16px;
+   padding: 10px 12px;
+   border: 1px solid #9e9e9e;
+ }
+ .cell.selects select option {
+   width: 100%;
+   height: 100%;
+   border: none;
+   outline: none;
+   background-color: transparent;
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   cursor: pointer;
+   font-size: 16px;
+   padding: 10px 12px;
+   border: 1px solid #9e9e9e;
+ }
+ /* Custom Arrow */
+ .cell.selects::after {
+   content: '\25BC'; /* Downward arrow */
+   position: absolute;
+   top: 50%;
+   right: 10px;
+   transform: translateY(-50%);
+   font-size: 14px;
+   color: #555;
+   padding: 5px;
+ }
+
+
+ /* Hover Effect */
+ .custom-select:hover {
+   background-color: #e0e0e0;
+ }
+
+ @media (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 10px;
+     }
+     .header .cell {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-right: 1px solid white;
+     }
+     .header .cell b {
+        color: white;
+     }
+     .body {
+      display: grid;
+      grid-template-columns: repeat(7,1fr);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 10px;
+     }
+     .body .cell {
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+     }
+     .body .cell b{
+      display: none;
+     }
+ }
+  
