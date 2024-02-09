@@ -1,0 +1,23 @@
+.header {
+    display: none;
+ }
+
+
+ @media (min-width: 768px) {
+    .header {
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 10px;
+     }
+     .header .cell {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-right: 1px solid white;
+     }
+     .header .cell b {
+        color: white;
+     }
+
+ }

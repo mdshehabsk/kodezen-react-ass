@@ -1,7 +1,7 @@
 import { useReducer } from "react"
-import { ICheckbox } from "../../utils/types/CheckboxType"
-import CheckboxContext from "../context/CheckBoxContext"
-import CheckboxReducer from "../reducer/CheckBoxReducer"
+import { ICheckbox } from "../../utils/types/CourseFilterType"
+import CheckboxContext from "../context/CourseFilterContext"
+import CheckboxReducer from "../reducer/CourseFilterReducer"
 
 export const initialState : ICheckbox []  = [
     {
@@ -36,11 +36,11 @@ export const initialState : ICheckbox []  = [
 
 
 
-const CheckboxProvider : React.FC<{children:JSX.Element}> = ({children}) => {
+const CourseFilterProvider : React.FC<{children:JSX.Element}> = ({children}) => {
     const [state,dispatch] = useReducer(CheckboxReducer,initialState)
     return <CheckboxContext.Provider value={{state,dispatch}} >
         {children}
     </CheckboxContext.Provider>
 }
 
-export default CheckboxProvider
+export default CourseFilterProvider

@@ -1,7 +1,7 @@
-import { ICheckbox } from "../../utils/types/CheckboxType";
-import { CheckboxAction, CheckboxActionKind } from "../actions/CheckboxAction";
+import { ICheckbox } from "../../utils/types/CourseFilterType";
+import { CheckboxAction, CheckboxActionKind } from "../actions/CourseFilterAction";
 
-const CheckboxReducer = (state: ICheckbox[], action: CheckboxAction) => {
+const CourseFilterReducer = (state: ICheckbox[], action: CheckboxAction) => {
   switch (action.type) {
     case CheckboxActionKind.CHANGE_CHECKED:
       const name = action.payload.name;
@@ -22,4 +22,4 @@ const CheckboxReducer = (state: ICheckbox[], action: CheckboxAction) => {
   }
 };
 
-export default CheckboxReducer;
+export default CourseFilterReducer;

@@ -38,7 +38,6 @@ let formattedDateTime =
   "/" +
   year;
 
-// Display the formatted date and time
 
 export const initialState: CourseItem[] = [
   {

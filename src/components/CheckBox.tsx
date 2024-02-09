@@ -1,8 +1,15 @@
 import React, { FC, useContext } from "react";
 import styles from "../styles/checkbox.module.css";
-import CheckboxContext, { ICheckboxContextType } from "../store/context/CheckBoxContext";
-import { CheckboxActionKind } from "../store/actions/CheckboxAction";
+import CheckboxContext from "../store/context/CourseFilterContext";
+import { CheckboxActionKind } from "../store/actions/CourseFilterAction";
 
+
+// types import
+
+import { ICourseFilter } from "../store/context/CourseFilterContext";
+
+
+//define props type
 type Tprops = {
   showCheckBox: boolean;
   setShowCheckBox: any;
@@ -11,7 +18,7 @@ type Tprops = {
 
 
 const CheckBox: FC<Tprops> = ({ showCheckBox, setShowCheckBox }) => {
-  const {state,dispatch} = useContext(CheckboxContext) as ICheckboxContextType
+  const {state,dispatch} = useContext(CheckboxContext) as ICourseFilter
  const checkboxClick = (event:React.ChangeEvent<HTMLInputElement>) => {
   const checked = event.target.checked
   const name = event.target.value

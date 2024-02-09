@@ -1,0 +1,50 @@
+
+.navbar {
+    display: flex;
+    padding: 15px 10px;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .navbar .logo h3 {
+    color: white;
+    font-size: 22px;
+ }
+ .navbar  .right {
+       display: flex;
+       gap: 10px;
+       align-items: center;
+ 
+ }
+ .navbar  .right button {
+ background-color: #3498db;
+   color: #fff;
+   border: none;
+   padding: 10px ;
+   font-size: 16px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+ .hamburger {
+    width: 30px;
+     height: 20px;
+     position: relative;
+     cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: transform 0.3s ease;
+  }
+  .hamburger div:nth-child(1) {
+    top: 0;
+  }
+  .hamburger div:nth-child(2) {
+    top: 8px;
+  }
+  .hamburger div:nth-child(3) {
+    top: 16px;
+  }
